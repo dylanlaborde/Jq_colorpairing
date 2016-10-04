@@ -1,27 +1,50 @@
-
-
-
-
-
 var colors =$(".color");
-
+var btcolors =$(this).data("color");
 $(colors).css("background",function(){
 	var btcolors =$(this).data("color");
 	return btcolors
-
 });
+function checked(){
+	return $("#modify-texte").is(":checked");
+};
 
-$(colors).click(function(){
+$("input").click(function(){
 	var btcolors =$(this).data("color");
-	console.log(btcolors);
-	$("body").css("background", function(){
-		return btcolors;
+	if (checked()){
+		$(".main").css("color",btcolors)
+	}else{
+		$("body").css("background", function(){
+			return btcolors;
+		});
+	}
+});	
 
 
-	});
 
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
